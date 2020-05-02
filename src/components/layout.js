@@ -1,7 +1,7 @@
 import React from "react"
 
-import NavLogo from "../images/ek-only-nav.png"
-import FooterLogo from "../images/ek-logo.png"
+import NavLogo from "../data/images/ek-only-nav.png"
+import FooterLogo from "../data/images/ek-logo.png"
 
 const Layout = ({ children }) => {
   return (
@@ -26,8 +26,15 @@ const Layout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        <img src={FooterLogo} alt="Elvis Knapman logo" />
-        <p>&copy; {new Date().getFullYear()}</p>
+        <img
+          src={FooterLogo}
+          alt="Elvis Knapman logo"
+          className="footer-logo"
+        />
+        <p className="copyright">
+          &copy;{new Date().getFullYear()} — created by Elvis Knapman while
+          missing 🥅🏒
+        </p>
       </footer>
     </>
   )
