@@ -1,18 +1,40 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Test from "../components/test"
+import Projects from "../components/projects"
+import Hero from "../components/hero"
 import "../styles/index.scss"
 
 export default () => {
+  const data = useStaticQuery(graphql`
+    query myQuery {
+      projects: allProjectsJson {
+        edges {
+          node {
+            id
+            title
+            description
+            resources
+            project_link
+            github_link
+            image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
-      <div>
-        Hello world!
-        <Test>
-          <p>This is the test component</p>
-        </Test>
-      </div>
+      <Hero />
+      <Projects projects={data.projects} />
     </Layout>
   )
 }
