@@ -2,13 +2,18 @@ footer {
   background-color: #d4d4d4;
   border-top: 2px solid $nav-bg;
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.6rem;
 
   p {
     font-size: 1.4rem;
   }
 
-  img {
-    width: 250px;
+  .footer-logo {
+    width: 18rem;
+  }
+
+  .copyright {
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
   }
 }
