@@ -18,6 +18,7 @@ export default () => {
             resources
             project_link
             github_link
+            image_alt_text
             image {
               childImageSharp {
                 fluid {
