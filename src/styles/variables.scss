@@ -2,12 +2,20 @@
 $main-color: #39c;
 $secondary-color: #000;
 $main-text: #fff;
+$white: #fff;
+$github: #000;
 
-$defaultColor: black;
-$base-color: #39c;
-$nav-bg: #39c;
-$nav-button-bg: #39c;
-$nav-button-hover: #000;
+$defaultColor: $secondary-color;
+$base-color: $main-color;
+$nav-bg: $main-color;
+$nav-button-bg: $main-color;
+$nav-button-bg: $main-color;
+$nav-button-hover: $secondary-color;
 
-$tablet: 800px;
+$project-btn-site: $main-color;
+$project-btn-github: $github;
+
+$md-computer: 1260px;
+$tablet: 835px;
+$md-phone: 600px;
 $phone: 500px;
