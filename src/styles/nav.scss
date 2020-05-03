@@ -129,6 +129,8 @@
 
 .right-nav {
   a {
+    display: inline-flex;
+    align-items: center;
     background-color: $nav-button-bg;
     border-radius: 4px;
     color: #fff;
