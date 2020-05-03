@@ -118,7 +118,9 @@ main {
   }
 
   .content-box {
-    flex-basis: 32%;
+    width: 32%;
+    justify-content: space-around;
+    min-width: 34.5rem;
     padding: 2rem 2.5rem;
     border: 1px solid $nav-button-bg;
     text-align: left;
@@ -127,12 +129,13 @@ main {
     border-top: 0.4rem solid $nav-button-bg;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.22);
 
+    @media (max-width: $md-computer) {
+      width: 48%;
+    }
+
     @media (max-width: $tablet) {
       width: 100%;
       margin-top: 1.5rem;
-    }
-
-    &:not(:last-child) {
     }
 
     h2 {
@@ -185,5 +188,38 @@ div.underline {
 
   &:active {
     color: #575757;
+  }
+}
+
+.project-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+
+  .project-btn {
+    min-width: 12.8rem;
+    padding: 1rem 2.8rem;
+    color: $white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-icon {
+      font-size: 1.5rem;
+      margin-right: 0.3rem;
+    }
+
+    // &:not(:last-child) {
+    //   margin-right: 0.5rem;
+    // }
+
+    &.site {
+      background-color: $project-btn-site;
+    }
+
+    &.github {
+      background-color: $project-btn-github;
+    }
   }
 }
