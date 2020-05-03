@@ -16,6 +16,7 @@
 
   @media (max-width: $tablet) {
     padding: 0 2rem;
+    justify-content: space-between;
   }
 
   .ek-logo {
@@ -138,12 +139,24 @@
     transition: 0.35s;
     padding: 0.5rem 1.5rem;
 
+    @media (max-width: $md-phone) {
+      display: none;
+    }
+
     &:hover {
       background-color: $nav-button-hover;
     }
 
     &:not(:first-child) {
       margin-left: 1rem;
+    }
+
+    .mobile-menu {
+      display: none;
+
+      @media (max-width: $md-phone) {
+        display: block;
+      }
     }
   }
 
