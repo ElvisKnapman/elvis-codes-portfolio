@@ -4,10 +4,10 @@ import Project from "./project"
 
 const Projects = ({ projects }) => {
   return (
-    <section class="first-content" id="learn-more">
-      <h3 class="section-header">Projects</h3>
-      <div class="underline">&nbsp;</div>
-      <div class="container">
+    <section className="first-content" id="learn-more">
+      <h3 className="section-header">Projects</h3>
+      <div className="underline">&nbsp;</div>
+      <div className="projects-container">
         {projects.edges.map((project, idx) => {
           return <Project project={project} />
         })}
