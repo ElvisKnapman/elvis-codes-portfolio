@@ -1,6 +1,8 @@
 import React from "react"
-
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
 
 const Project = ({ project }) => {
   console.log("PROJECT", project)
@@ -17,6 +19,15 @@ const Project = ({ project }) => {
           />
         </a>
         <p className="project-desc">{project.node.description}</p>
+        <div className="project-links">
+          <div className="project-btn site">
+            <FontAwesomeIcon icon={faLink} className="project-btn-icon" /> Site
+          </div>
+          <div className="project-btn github">
+            <FontAwesomeIcon icon={faGithub} className="project-btn-icon" />{" "}
+            GitHub
+          </div>
+        </div>
       </div>
     </>
   )
